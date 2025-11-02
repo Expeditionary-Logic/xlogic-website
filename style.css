@@ -1,0 +1,1041 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ffecd2 100%);
+    min-height: 100vh;
+}
+
+body.expedition-page {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(139, 115, 85, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(90, 74, 58, 0.2) 0%, transparent 15%),
+        linear-gradient(to bottom,
+            #e8dcc4 0%,
+            #d4c5a9 30%,
+            #8b7355 70%,
+            #5a4a3a 100%);
+    background-attachment: fixed;
+    position: relative;
+}
+
+body.expedition-page::before {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    background-image:
+        /* Front mountain peak */
+        linear-gradient(135deg, transparent 45%, #2a1f19 45.5%, #2a1f19 55%, transparent 55.5%),
+        /* Second peak */
+        linear-gradient(125deg, transparent 60%, #3d2f24 60.5%, #3d2f24 75%, transparent 75.5%),
+        /* Third peak */
+        linear-gradient(145deg, transparent 50%, #4a3a2a 50.5%, #4a3a2a 65%, transparent 65.5%),
+        /* Fourth peak */
+        linear-gradient(130deg, transparent 70%, #5a4a3a 70.5%, #5a4a3a 85%, transparent 85.5%);
+    background-size:
+        50% 100%,
+        40% 80%,
+        45% 70%,
+        35% 60%;
+    background-position:
+        -10% bottom,
+        20% bottom,
+        50% bottom,
+        80% bottom;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+body.expedition-page .container {
+    position: relative;
+    z-index: 1;
+}
+
+body.sponge-page {
+    background: linear-gradient(135deg, #ff9a56 0%, #ffb347 50%, #ffa726 100%);
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+body.expedition-page .navbar {
+    background: rgba(232, 220, 196, 0.98);
+    border-bottom: 3px solid #8b7355;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.expedition-page .navbar .logo {
+    color: #3d2f24;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+body.expedition-page .nav-links a {
+    color: #5a4a3a;
+    font-weight: 500;
+}
+
+body.expedition-page .nav-links a:hover {
+    color: #3d2f24;
+}
+
+body.sponge-page .navbar {
+    background: rgba(232, 220, 196, 0.98);
+    border-bottom: 3px solid #8b7355;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.sponge-page .navbar .logo {
+    color: #3d2f24;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+body.sponge-page .nav-links a {
+    color: #5a4a3a;
+    font-weight: 500;
+}
+
+body.sponge-page .nav-links a:hover {
+    color: #3d2f24;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2c3e50;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #fff;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Expedition Hero Section */
+body.expedition-page .hero {
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            rgba(139, 115, 85, 0.02) 1px,
+            transparent 2px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            rgba(139, 115, 85, 0.02) 1px,
+            transparent 2px,
+            transparent 4px
+        ),
+        rgba(232, 220, 196, 0.95);
+    border: 4px double #8b7355;
+    box-shadow:
+        0 8px 16px rgba(0,0,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+body.expedition-page .hero::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(139, 115, 85, 0.3);
+    pointer-events: none;
+    border-radius: 4px;
+}
+
+body.expedition-page .hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    transform: translate(-50%, -50%);
+    background:
+        linear-gradient(0deg, transparent 48%, #8b7355 48%, #8b7355 52%, transparent 52%),
+        linear-gradient(90deg, transparent 48%, #8b7355 48%, #8b7355 52%, transparent 52%),
+        linear-gradient(45deg, transparent 48%, rgba(139, 115, 85, 0.6) 48%, rgba(139, 115, 85, 0.6) 52%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(139, 115, 85, 0.6) 48%, rgba(139, 115, 85, 0.6) 52%, transparent 52%),
+        radial-gradient(circle, transparent 30%, #8b7355 30%, #8b7355 35%, transparent 35%);
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.expedition-page .hero h1 {
+    color: #3d2f24;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+    font-size: 3.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+body.expedition-page .hero .tagline {
+    color: #5a4a3a;
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Philosophy Section */
+.philosophy {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.philosophy h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.philosophy > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.principle {
+    padding: 1.5rem;
+    background-color: #f5f7fa;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.principle h3 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+}
+
+.principle p {
+    color: #666;
+}
+
+/* Expedition Philosophy Section */
+body.expedition-page .philosophy {
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            rgba(139, 115, 85, 0.02) 1px,
+            transparent 2px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            rgba(139, 115, 85, 0.02) 1px,
+            transparent 2px,
+            transparent 4px
+        ),
+        rgba(232, 220, 196, 0.95);
+    border: 4px double #8b7355;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+body.expedition-page .philosophy::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background:
+        linear-gradient(0deg, transparent 47%, #8b7355 47%, #8b7355 53%, transparent 53%),
+        linear-gradient(90deg, transparent 47%, #8b7355 47%, #8b7355 53%, transparent 53%),
+        conic-gradient(from 0deg at 50% 50%,
+            #8b7355 0deg,
+            transparent 20deg,
+            transparent 70deg,
+            #8b7355 90deg,
+            transparent 110deg,
+            transparent 160deg,
+            #8b7355 180deg,
+            transparent 200deg,
+            transparent 250deg,
+            #8b7355 270deg,
+            transparent 290deg,
+            transparent 340deg,
+            #8b7355 360deg
+        ),
+        radial-gradient(circle, transparent 40%, #8b7355 40%, #8b7355 42%, transparent 42%);
+    opacity: 0.15;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+body.expedition-page .philosophy h2 {
+    color: #3d2f24;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+    font-size: 2.5rem;
+}
+
+body.expedition-page .philosophy > p {
+    color: #5a4a3a;
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+body.expedition-page .principle {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #8b7355;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 2rem;
+}
+
+body.expedition-page .principle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 16px;
+    background: #8b7355;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+body.expedition-page .principle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+body.expedition-page .principle h3 {
+    color: #3d2f24;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+body.expedition-page .principle p {
+    color: #5a4a3a;
+    line-height: 1.7;
+}
+
+/* Products Section */
+.products {
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+}
+
+.products h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Expedition Products Section */
+body.expedition-page .products {
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            rgba(139, 115, 85, 0.02) 1px,
+            transparent 2px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            rgba(139, 115, 85, 0.02) 1px,
+            transparent 2px,
+            transparent 4px
+        ),
+        rgba(232, 220, 196, 0.95);
+    border: 4px double #8b7355;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    border-radius: 8px;
+}
+
+body.expedition-page .products h2 {
+    color: #3d2f24;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+body.expedition-page .product-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #8b7355;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+body.expedition-page .product-card::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background:
+        radial-gradient(circle at 50% 50%, #8b7355 0%, #8b7355 30%, transparent 30%),
+        linear-gradient(135deg, #8b7355 0%, #8b7355 40%, transparent 40%),
+        linear-gradient(-135deg, #8b7355 0%, #8b7355 40%, transparent 40%);
+    opacity: 0.2;
+}
+
+body.expedition-page .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+body.expedition-page .product-card h3 {
+    color: #3d2f24;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+body.expedition-page .product-card p {
+    color: #5a4a3a;
+    line-height: 1.7;
+}
+
+body.expedition-page .btn {
+    background: linear-gradient(135deg, #8b7355 0%, #5a4a3a 100%);
+    color: #fff;
+    border: 2px solid #3d2f24;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-weight: 600;
+}
+
+body.expedition-page .btn:hover {
+    background: linear-gradient(135deg, #5a4a3a 0%, #3d2f24 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Product Page Styles */
+.product-hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.product-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.95;
+}
+
+.product-description {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.product-description h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.product-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.features {
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+}
+
+.features h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.feature h3 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+}
+
+.feature p {
+    color: #666;
+}
+
+.cta {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.cta h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Sponge Product Page Specific Styles */
+body.sponge-page .source h3 a,
+body.sponge-page .source p a,
+body.sponge-page .feature p a,
+body.sponge-page .steps a {
+    color: #ff7043;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+body.sponge-page .source h3 a:hover,
+body.sponge-page .source p a:hover,
+body.sponge-page .feature p a:hover,
+body.sponge-page .steps a:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+.sponge-hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.sponge-icon {
+    width: 500px;
+    height: 500px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    transform: scaleX(-1);
+}
+
+.sponge-hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.sponge-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.sponge-hero .subtitle {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-top: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.badge-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.app-store-button-container {
+    margin-top: 2rem;
+}
+
+.app-store-button {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.app-store-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.app-store-badge {
+    width: 180px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.free-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    align-self: center;
+}
+
+.product-intro {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.product-intro h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.product-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.use-cases {
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.use-cases h2 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.use-case {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-left: 4px solid #ff7043;
+}
+
+.use-case h3 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+}
+
+.use-case p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.features-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.features-section h2 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.sources-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.sources-section h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sources-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.source {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    border-top: 4px solid #ff7043;
+}
+
+.source h3 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+}
+
+.source p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.source-coming-soon {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-top: 4px dashed #ff9a56;
+}
+
+.source-coming-soon h3 {
+    color: #5a4a3a;
+    font-style: italic;
+}
+
+.source-coming-soon p {
+    color: #777;
+}
+
+.how-it-works {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.how-it-works h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.steps {
+    max-width: 700px;
+    margin: 0 auto;
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+}
+
+.steps li {
+    position: relative;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.steps li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ff7043;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.tech-details {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tech-details h2 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.tech-list {
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.tech-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.tech-list li:last-child {
+    border-bottom: none;
+}
+
+.tech-list strong {
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+body.expedition-page footer {
+    background: linear-gradient(135deg, #3d2f24 0%, #2a1f19 100%);
+    border-top: 3px solid #8b7355;
+    color: #e8dcc4;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .product-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .sponge-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sponge-hero-content {
+        text-align: center;
+    }
+
+    .badge-container {
+        justify-content: center;
+    }
+
+    .app-store-button-container {
+        text-align: center;
+    }
+
+    .sponge-hero h1 {
+        font-size: 2rem;
+    }
+
+    .sponge-icon {
+        width: 280px;
+        height: 280px;
+    }
+
+    .tagline, .subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.9rem;
+    }
+
+    .product-intro p {
+        font-size: 1rem;
+    }
+
+    .free-badge {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .principles, .feature-grid, .use-case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sources-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Expedition mobile styles */
+    body.expedition-page .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    body.expedition-page .hero .tagline {
+        font-size: 1.1rem;
+    }
+
+    body.expedition-page .philosophy h2,
+    body.expedition-page .products h2 {
+        font-size: 2rem;
+    }
+
+    body.expedition-page::before {
+        height: 40vh;
+    }
+}

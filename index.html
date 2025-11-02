@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expeditionary Logic - Technology for Good</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="expedition-page">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Expeditionary Logic</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sponge.html">Sponge</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Technology for Good</h1>
+            <p class="tagline">Building better software that builds better humans</p>
+        </section>
+
+        <section class="philosophy">
+            <h2>Our Philosophy</h2>
+            <p>
+                Technology should serve humanity, not the other way around.
+                We're committed to creating software that helps people get what is good from technology
+                while deliberately avoiding the dark patterns and negative impacts that plague the digital world.
+            </p>
+
+            <div class="principles">
+                <div class="principle">
+                    <h3>Human-Centered Design</h3>
+                    <p>We build tools that respect your time, attention, and autonomy. No dark patterns, no manipulation, no endless scrolling.</p>
+                </div>
+
+                <div class="principle">
+                    <h3>Privacy First</h3>
+                    <p>Your data belongs to you. We design our products to minimize data collection and maximize user privacy.</p>
+                </div>
+
+                <div class="principle">
+                    <h3>Purposeful Technology</h3>
+                    <p>Every feature we build has a clear purpose: to help you accomplish your goals and enhance your life, not to keep you hooked.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-card">
+                <h3>Sponge</h3>
+                <p>A standalone audiobook player for Apple Watch. <strong>100% free.</strong> Leave your phone at home, but never stop learning.</p>
+                <a href="sponge.html" class="btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Expeditionary Logic. Building technology for good.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
