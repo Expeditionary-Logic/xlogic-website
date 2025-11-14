@@ -688,7 +688,7 @@ body.sponge-page .steps a:hover {
     display: flex;
     align-items: center;
     gap: 3rem;
-    padding: 4rem 2rem;
+    padding: 2.8rem 2rem;
     color: #fff;
     margin-top: 2rem;
 }
@@ -1159,7 +1159,7 @@ body.about-page .contact-method a:hover {
 @media (max-width: 1024px) {
     .sponge-hero {
         gap: 2rem;
-        padding: 3rem 1.5rem;
+        padding: 2.1rem 1.5rem;
     }
 
     .sponge-icon {
