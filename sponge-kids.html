@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponge for Kids - Safe Audiobooks for Children</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="sponge-page">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Expeditionary Logic</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sponge.html">Sponge</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="sponge-hero">
+            <img src="images/sponge-icon.png" alt="Sponge App Icon" class="sponge-icon">
+            <div class="sponge-hero-content">
+                <h1>Sponge for Kids</h1>
+                <p class="subtitle">Safe, curated audiobooks designed for children.</p>
+                <p class="hero-subtext">Age-appropriate content, protected listening.</p>
+            </div>
+        </section>
+
+        <section class="product-intro">
+            <h2>Designed for Children</h2>
+            <p>
+                <strong>Sponge is designed to be used by kids.</strong> We believe children deserve access to the vast
+                world of public domain literature and audiobooks, but in a way that keeps them safe and gives parents peace of mind.
+            </p>
+            <p style="margin-top: 1rem;">
+                Every decision we make about content availability is guided by one principle: creating a safe,
+                age-appropriate listening experience for young users.
+            </p>
+        </section>
+
+        <section class="features-section">
+            <h2>How We Keep Content Safe</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>🛡️ Content Filtering</h3>
+                    <p>Sponge connects to Librivox, which has over 20,000 free audiobooks. While most of this content is
+                    appropriate for all ages, some books may not be suitable for children.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🚫 Automatic Blocking</h3>
+                    <p>We automatically filter out Librivox books tagged with the "Erotica" genre. These books are
+                    silently unavailable in Sponge—they simply won't appear in search results or browsing.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🔍 Ongoing Protection</h3>
+                    <p>If other content is later determined to be inappropriate for children, it will also be filtered
+                    out of Sponge. We continuously review and update our content protections.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>Our Philosophy</h2>
+            <div style="max-width: 800px; margin: 0 auto; color: #333;">
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    We recognize that some users might want uncensored access to all public domain books available
+                    through Librivox. We respect those opinions and understand the desire for unrestricted access to
+                    public domain literature.
+                </p>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    However, <strong>Sponge is designed for children</strong>, and that means we've decided to remove
+                    the possibility of accessing certain content through our app. This is a deliberate choice to
+                    prioritize child safety over comprehensive access.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    We believe this approach gives parents confidence that their children can explore audiobooks
+                    independently while staying within age-appropriate boundaries.
+                </p>
+            </div>
+        </section>
+
+        <section class="sources-section">
+            <h2>Help Us Keep Sponge Safe</h2>
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #555; margin-bottom: 2rem;">
+                    If you have discovered content that you believe is inappropriate for children and is accessible
+                    through Sponge, please let us know. We take these reports seriously and will investigate and take
+                    appropriate action.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #555; margin-bottom: 2rem;">
+                    Your vigilance helps us maintain a safe environment for all young users.
+                </p>
+                <a href="about.html#contact" class="btn" style="display: inline-block; padding: 1rem 2rem; background-color: #ff7043; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 1.1rem; transition: background-color 0.3s, transform 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    Report Inappropriate Content
+                </a>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Safe Audiobooks for Young Learners</h2>
+            <p>Sponge gives children the freedom to explore thousands of audiobooks while keeping them protected from inappropriate content.</p>
+            <p style="margin-top: 1rem;"><a href="sponge.html" style="color: #ff7043; font-weight: 600; text-decoration: none;">Learn more about Sponge</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Expeditionary Logic. Building technology for good.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
