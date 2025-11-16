@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Expeditionary Logic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="expedition-page">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Expeditionary Logic</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sponge.html">Sponge</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Privacy Policy</h1>
+            <p class="tagline">Your privacy is not a commodity. It's a fundamental right.</p>
+        </section>
+
+        <section class="philosophy">
+            <h2>Our Commitment to Your Privacy</h2>
+            <p>
+                At Expeditionary Logic, we deeply respect your privacy. This isn't just a legal statement—it's a core principle
+                that guides how we build our products. Our approach is simple: <strong>we don't need to collect your information,
+                so we don't collect your information.</strong>
+            </p>
+        </section>
+
+        <section class="philosophy">
+            <h2>What We Don't Do</h2>
+            <div class="principles">
+                <div class="principle">
+                    <h3>No Tracking</h3>
+                    <p>We don't track your behavior, your location, or your usage patterns. No analytics, no cookies, no fingerprinting.</p>
+                </div>
+
+                <div class="principle">
+                    <h3>No Data Collection</h3>
+                    <p>We don't collect personal information, browsing data, or any other data about you. What you do with our products stays on your device.</p>
+                </div>
+
+                <div class="principle">
+                    <h3>No Third Parties</h3>
+                    <p>We don't share data with third parties because we don't have any data to share. No advertisers, no data brokers, no hidden partners.</p>
+                </div>
+
+                <div class="principle">
+                    <h3>No Accounts Required</h3>
+                    <p>Most of our products work without requiring you to create an account, sign in, or provide any personal information.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="philosophy">
+            <h2>How Our Products Work</h2>
+            <p>
+                Our products, like Sponge, are designed to work entirely on your device. Your audiobooks, your listening progress,
+                your preferences—everything stays local. We've built our technology to be powerful without being invasive.
+            </p>
+            <p>
+                This means we can't help you recover data if you lose your device, but it also means your data is truly yours.
+                We believe that's a fair trade-off for genuine privacy.
+            </p>
+        </section>
+
+        <section class="philosophy">
+            <h2>When We Might Collect Information</h2>
+            <p>
+                If you contact us for support or send us feedback, we'll receive whatever information you choose to share with us
+                (like your email address). We'll use that information solely to respond to you and provide support. We won't add you
+                to mailing lists or use it for any other purpose.
+            </p>
+            <p>
+                Some of our products may be distributed through third-party platforms (like the Apple App Store). Those platforms
+                may collect their own data according to their privacy policies, but we don't receive any personally identifiable
+                information from them.
+            </p>
+        </section>
+
+        <section class="philosophy">
+            <h2>Changes to This Policy</h2>
+            <p>
+                We'll update this policy if our practices change. But our core commitment won't change: your privacy matters,
+                and we'll always choose privacy over profit.
+            </p>
+            <p>
+                <em>Last updated: <span id="current-date"></span></em>
+            </p>
+        </section>
+
+        <section class="philosophy">
+            <h2>Questions?</h2>
+            <p>
+                If you have questions about our privacy practices, feel free to <a href="support.html">contact us</a>.
+                We're happy to explain our approach in more detail.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Expeditionary Logic. Building technology for good.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
