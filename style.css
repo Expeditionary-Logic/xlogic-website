@@ -764,6 +764,21 @@ body.sponge-page .steps a:hover {
     align-self: center;
 }
 
+.available-badge {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    border-color: #fff;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.8), 0 0 30px rgba(76, 175, 80, 0.4);
+    }
+}
+
 .product-intro {
     background-color: #fff;
     padding: 3rem 2rem;
